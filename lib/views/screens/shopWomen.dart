@@ -108,47 +108,34 @@ class _ShopWomenState extends State<ShopWomen> {
       ),
     ];
     return Scaffold(
-      // appBar: AppBar(
-      //   centerTitle: false,
-      //   title: Text(
-      //     "Filters",
-      //     textAlign: TextAlign.right,
-      //   ),
-      // ),
+      appBar: AppBar(
+        // centerTitle: true,
+        actions: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => WomensTop(),
+                  ));
+            },
+            child: Text(
+              "Filters",
+              textAlign: TextAlign.right,
+            ),
+          )
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.only(right: 10, bottom: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => WomensTop(),
-                            ));
-                      },
-                      child: Text(
-                        'Filters',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 5,
-              ),
               Text(
                 'Shop Women',
                 style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 30,
                     color: Colors.black,
                     fontWeight: FontWeight.bold),
               ),

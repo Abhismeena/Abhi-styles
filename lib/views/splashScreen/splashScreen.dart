@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 image: AssetImage('assets/images/splashScr.jpg'),
                 fit: BoxFit.cover)),
         child: Padding(
-          padding: const EdgeInsets.only(left: 30, top: 20),
+          padding: const EdgeInsets.only(left: 5, top: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     fontWeight: FontWeight.w300),
               ),
               SizedBox(
-                height: 250,
+                height: 150,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,8 +128,7 @@ class _SplashScreenState extends State<SplashScreen> {
               SizedBox(
                 height: 25,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20, top: 5),
+              Center(
                 child: InkWell(
                   child: Text(
                     'already have an account? login',

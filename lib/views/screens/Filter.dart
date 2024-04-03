@@ -41,6 +41,7 @@ class Filter extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 400,
+              // height: MediaQuery.of(context).size.height,
               child: ListView.separated(
                 itemBuilder: (context, index) {
                   return GestureDetector(
@@ -80,13 +81,13 @@ class Filter extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 150,
+              height: 70,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10, top: 220),
+              padding: const EdgeInsets.only(left: 10, right: 10, top: 0),
               child: Container(
                 width: double.infinity,
-                height: 50,
+                height: 40,
                 // color: Colors.red,
                 child: RoundedButton(
                   btnName: "Apply",

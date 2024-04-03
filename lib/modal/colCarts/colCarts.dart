@@ -94,7 +94,6 @@
 // }
 
 import 'package:fashion/views/screens/DetailScreen.dart';
-import 'package:fashion/views/screens/Productview.dart';
 import 'package:flutter/material.dart';
 
 class CartItem {

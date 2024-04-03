@@ -5,6 +5,24 @@ class ShowProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.shopping_bag_outlined,
+              // color: Colors.white,
+              // size: 35,
+            ),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ShopTheLook(),
+                  ));
+            },
+          ),
+        ],
+      ),
       body: Stack(
         children: [
           Container(
@@ -17,34 +35,34 @@ class ShowProduct extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            top: 10,
-            left: 10,
-            child: IconButton(
-              icon: Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ),
-          Positioned(
-            top: 10,
-            right: 10,
-            child: IconButton(
-              icon: Icon(
-                Icons.shopping_bag_outlined,
-                // color: Colors.white,
-                // size: 35,
-              ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ShopTheLook(),
-                    ));
-              },
-            ),
-          ),
+          // Positioned(
+          //   top: 10,
+          //   left: 10,
+          //   child: IconButton(
+          //     icon: Icon(Icons.arrow_back),
+          //     onPressed: () {
+          //       Navigator.pop(context);
+          //     },
+          //   ),
+          // ),
+          // Positioned(
+          //   top: 10,
+          //   right: 10,
+          //   child: IconButton(
+          //     icon: Icon(
+          //       Icons.shopping_bag_outlined,
+          //       // color: Colors.white,
+          //       // size: 35,
+          //     ),
+          //     onPressed: () {
+          //       Navigator.push(
+          //           context,
+          //           MaterialPageRoute(
+          //             builder: (context) => ShopTheLook(),
+          //           ));
+          //     },
+          //   ),
+          // ),
           Positioned(
             bottom: 40,
             left: 20,
@@ -53,8 +71,8 @@ class ShowProduct extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    width: 300,
-                    height: 150,
+                    width: 250,
+                    height: 130,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Colors.white,
@@ -64,7 +82,7 @@ class ShowProduct extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SizedBox(
-                            width: 100,
+                            width: 80,
                             child: Image.asset("assets/images/top7.jpg"),
                           ),
                         ),
@@ -117,8 +135,8 @@ class ShowProduct extends StatelessWidget {
                     width: 20,
                   ),
                   Container(
-                    width: 300,
-                    height: 150,
+                    width: 250,
+                    height: 130,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Colors.white,
@@ -128,7 +146,7 @@ class ShowProduct extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SizedBox(
-                            width: 100,
+                            width: 80,
                             child: Image.asset("assets/images/top5.jpg"),
                           ),
                         ),
@@ -181,8 +199,8 @@ class ShowProduct extends StatelessWidget {
                     width: 20,
                   ),
                   Container(
-                    width: 300,
-                    height: 150,
+                    width: 250,
+                    height: 130,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Colors.white,
@@ -192,7 +210,7 @@ class ShowProduct extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: SizedBox(
-                            width: 100,
+                            width: 80,
                             child: Image.asset("assets/images/jack.jpg"),
                           ),
                         ),

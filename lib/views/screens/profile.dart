@@ -23,6 +23,7 @@ class Profile extends StatelessWidget {
       "English",
       "AUD",
     ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Profiles"),
@@ -34,48 +35,50 @@ class Profile extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 25,
-          ),
-          Center(
-            child: Container(
-              width: 150,
-              height: 150,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage("assets/images/profile.jpg"),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 25,
+            ),
+            Center(
+              child: Container(
+                width: 150,
+                height: 150,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage("assets/images/profile.jpg"),
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Kelly Portman",
-            style: TextStyle(
-                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            "kellyPortman@gmail.com",
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 18,
+            SizedBox(
+              height: 10,
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Expanded(
-            child: Container(
+            Text(
+              "Kelly Portman",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),
+            Text(
+              "kellyPortman@gmail.com",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 18,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
               width: double.infinity,
-              height: double.maxFinite,
-              // color: Colors.amber,
+              // Remove the Expanded widget
               child: ListView.separated(
+                shrinkWrap: true, // Added shrinkWrap to ListView
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text(
@@ -96,16 +99,18 @@ class Profile extends StatelessWidget {
                 },
                 itemCount: arrNames.length,
                 separatorBuilder: (context, index) {
-                  return Divider(
-                    height: 20,
-                    thickness: 1,
+                  return Padding(
+                    padding: const EdgeInsets.only(left: 10, right: 10),
+                    child: Divider(
+                      height: 20,
+                      thickness: 1,
+                    ),
                   );
                 },
-                reverse: false,
               ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -193,14 +193,15 @@ class _DashbordScreenState extends State<DashbordScreen> {
                   // child: ReusableCarousel(imageList: imageList),
                 )),
             Container(
-              width: double.infinity,
-              height: 500,
-              color: Colors.amber,
+              width: MediaQuery.of(context).size.width,
+              height: 370,
+              // color: Colors.amber,
+              // child: Cards(items: items),
               child: Cards(items: items),
             ),
             Container(
               width: double.infinity,
-              height: 60,
+              // height: 60,
               margin: EdgeInsets.only(bottom: 10, left: 10, right: 10),
               color: Color.fromARGB(255, 190, 154, 154),
               child: Padding(
@@ -210,7 +211,7 @@ class _DashbordScreenState extends State<DashbordScreen> {
                   children: [
                     Text(
                       "Free returns,fast refunds  ",
-                      style: TextStyle(color: Colors.black, fontSize: 23),
+                      style: TextStyle(color: Colors.black, fontSize: 18),
                     ),
                     Icon(
                       Icons.check_box_outlined,

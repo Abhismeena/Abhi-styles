@@ -1,3 +1,4 @@
+import 'package:fashion/modal/btn/rounded_btn.dart';
 import 'package:fashion/views/screens/CheckOut.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -156,7 +157,7 @@ class DetailScreen extends StatelessWidget {
                     Row(
                       children: [
                         Container(
-                          width: 170,
+                          width: 128,
                           height: 60,
                           decoration: BoxDecoration(
                             border: Border(
@@ -187,7 +188,7 @@ class DetailScreen extends StatelessWidget {
                         ),
                         Container(
                           padding: EdgeInsets.only(left: 15, right: 5, top: 5),
-                          width: 170,
+                          width: 128,
                           height: 60,
                           decoration: BoxDecoration(
                             border: Border(
@@ -219,7 +220,7 @@ class DetailScreen extends StatelessWidget {
                             children: [
                               Text(
                                 "23 ratings   ",
-                                style: TextStyle(fontSize: 15),
+                                style: TextStyle(fontSize: 11),
                               ),
                               RatingBar.builder(
                                 initialRating: 4,
@@ -228,7 +229,7 @@ class DetailScreen extends StatelessWidget {
                                 itemCount: 5,
                                 itemSize: 15,
                                 itemPadding:
-                                    EdgeInsets.symmetric(horizontal: 1),
+                                    EdgeInsets.symmetric(horizontal: 0),
                                 updateOnDrag: true,
                                 itemBuilder: (context, index) => Icon(
                                   Icons.star,
@@ -246,12 +247,8 @@ class DetailScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Row(
-                      children: [
-                        Text(
-                          "This is a beautiful women classic Jacket for your\ndaily casual look and party time.",
-                        ),
-                      ],
+                    Text(
+                      "This is a beautiful women classic Jacket for your daily casual look and party time.",
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 15),
@@ -263,34 +260,15 @@ class DetailScreen extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    Container(
-                      padding: EdgeInsets.only(right: 15),
-                      width: double.maxFinite,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade800,
-                            offset: Offset(0.0, 5.0),
-                            blurRadius: 15,
-                            spreadRadius: 1.0,
-                          ),
-                        ],
-                      ),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Color.fromARGB(255, 88, 106, 110),
-                          shape: BeveledRectangleBorder(),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Checkout()),
-                          );
-                        },
-                        child: const Text(
-                          'Add to cart',
-                          style: TextStyle(color: Colors.white),
+                    Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Container(
+                        height: 40,
+                        width: double.infinity,
+                        child: RoundedButton(
+                          btnName: 'Add to cart',
+                          callback: () {},
+                          textStyle: TextStyle(color: Colors.white),
                         ),
                       ),
                     ),

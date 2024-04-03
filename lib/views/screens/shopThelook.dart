@@ -76,9 +76,7 @@ class ShopTheLook extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ProductView(
-                                  imageUrl: '',
-                                ),
+                                builder: (context) => ProductView(),
                               ));
                         },
                         child: Text(

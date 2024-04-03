@@ -40,8 +40,8 @@ class _ReusableCarouselState extends State<ReusableCarousel> {
                   ),
                   Positioned(
                     bottom: 30,
-                    left: 300,
-                    right: 0,
+                    left: 210,
+                    right: 10,
                     child: Container(
                       // padding: EdgeInsets.symmetric(vertical: 10),
                       // color: Colors.black.withOpacity(0.5),

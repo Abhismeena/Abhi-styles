@@ -14,33 +14,37 @@ class _ImageSlider extends State<ImageSlider> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         InkWell(
           onTap: () {
             print(currentIndex);
           },
-          child: CarouselSlider(
-              items: widget.imageLists
-                  .map(
-                    (dynamic item) => Image.asset(
-                      item['image_path'],
-                      fit: BoxFit.cover,
-                      width: double.maxFinite,
-                    ),
-                  )
-                  .toList(),
-              carouselController: imageSlider,
-              options: CarouselOptions(
-                  scrollPhysics: BouncingScrollPhysics(),
-                  autoPlay: true,
-                  aspectRatio: .5,
-                  viewportFraction: 1,
-                  onPageChanged: (index, reason) {
-                    setState(() {
-                      currentIndex = index;
-                    });
-                  })),
+          child: Container(
+            width: screenWidth,
+            child: CarouselSlider(
+                items: widget.imageLists
+                    .map(
+                      (dynamic item) => Image.asset(
+                        item['image_path'],
+                        fit: BoxFit.cover,
+                        width: double.maxFinite,
+                      ),
+                    )
+                    .toList(),
+                carouselController: imageSlider,
+                options: CarouselOptions(
+                    scrollPhysics: BouncingScrollPhysics(),
+                    autoPlay: true,
+                    aspectRatio: .5,
+                    viewportFraction: 1,
+                    onPageChanged: (index, reason) {
+                      setState(() {
+                        currentIndex = index;
+                      });
+                    })),
+          ),
         ),
         Positioned(
           top: 470,

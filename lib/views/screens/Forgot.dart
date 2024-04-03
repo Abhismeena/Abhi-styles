@@ -53,64 +53,61 @@ class _ForgotState extends State<Forgot> {
                         height: 150,
                       ),
 
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          height: 50,
-                          width: double.infinity,
-                          child: RoundedButton(
-                            btnName: 'Send me now',
-                            callback: () {
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return AlertDialog(
-                                    title: Icon(
-                                      Icons.lock_reset_sharp,
-                                      size: 150,
-                                    ),
-                                    content: Container(
-                                      height: 150.0,
-                                      width: 150.0,
-                                      child: Column(
-                                        children: <Widget>[
-                                          Text(
-                                            "You'll shortly receive an email with a code to setup a new password.",
-                                            style: TextStyle(
-                                                fontSize: 21,
-                                                color: Colors.black,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                          // SizedBox(height: 20),
-                                        ],
-                                      ),
-                                    ),
-                                    actions: [
-                                      Container(
-                                        width: double.infinity,
-                                        height: 50,
-                                        child: RoundedButton(
-                                          btnName: "Enter Code",
-                                          textStyle:
-                                              TextStyle(color: Colors.white),
-                                          callback: () {
-                                            Navigator.of(context).pop();
-                                          },
+                      Container(
+                        height: 50,
+                        width: double.infinity,
+                        child: RoundedButton(
+                          btnName: 'Send me now',
+                          callback: () {
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Icon(
+                                    Icons.lock_reset_sharp,
+                                    size: 150,
+                                  ),
+                                  content: Container(
+                                    height: 150.0,
+                                    width: 150.0,
+                                    child: Column(
+                                      children: <Widget>[
+                                        Text(
+                                          "You'll shortly receive an email with a code to setup a new password.",
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              color: Colors.black,
+                                              fontWeight: FontWeight.w500),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 40,
-                                      )
-                                    ],
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(0.0),
+                                        // SizedBox(height: 20),
+                                      ],
                                     ),
-                                  );
-                                },
-                              );
-                            },
-                            textStyle: TextStyle(color: Colors.white),
-                          ),
+                                  ),
+                                  actions: [
+                                    Container(
+                                      width: double.infinity,
+                                      height: 50,
+                                      child: RoundedButton(
+                                        btnName: "Enter Code",
+                                        textStyle:
+                                            TextStyle(color: Colors.white),
+                                        callback: () {
+                                          Navigator.of(context).pop();
+                                        },
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 40,
+                                    )
+                                  ],
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(0.0),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                          textStyle: TextStyle(color: Colors.white),
                         ),
                       ),
 

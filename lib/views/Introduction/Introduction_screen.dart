@@ -87,7 +87,7 @@ class IntroductionScreen extends StatelessWidget {
                     // ),
 
                     Container(
-                      height: 50,
+                      height: 40,
                       width: 200,
                       child: RoundedButton(
                         btnName: 'Go Shopping',

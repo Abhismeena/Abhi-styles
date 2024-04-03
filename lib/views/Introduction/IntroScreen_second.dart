@@ -14,7 +14,7 @@ class IntroScreenSecond extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: 30,
+              height: 10,
             ),
             Padding(
               padding: const EdgeInsets.only(right: 20),
@@ -61,7 +61,7 @@ class IntroScreenSecond extends StatelessWidget {
               padding: const EdgeInsets.only(left: 30, right: 30),
               child: Container(
                 width: double.infinity,
-                height: 350,
+                height: 280,
                 // color: Colors.amber,
                 child: Image.asset(
                   "assets/images/Introo.jpg",
@@ -76,7 +76,7 @@ class IntroScreenSecond extends StatelessWidget {
               padding: const EdgeInsets.only(left: 40, right: 20),
               child: Text(
                 'Browser and search your never style from our Permium and designer brands',
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(color: Colors.white, fontSize: 15),
               ),
             ),
             SizedBox(
@@ -101,7 +101,7 @@ class IntroScreenSecond extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, right: 30),
               child: Container(
-                height: 50,
+                height: 40,
                 width: double.infinity,
                 child: RoundedButton(
                   btnName: 'Go Shopping ',

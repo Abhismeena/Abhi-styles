@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ProductView extends StatelessWidget {
-  final String imageUrl;
+  // final String imageUrl;
 
-  ProductView({required this.imageUrl});
+  // ProductView({required this.imageUrl});
   final List<CartItem> cartItems = [
     CartItem(
         image: 'assets/images/sht.jpg',
@@ -53,6 +53,17 @@ class ProductView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.share,
+              color: Colors.grey,
+            ),
+            onPressed: () {},
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -66,32 +77,28 @@ class ProductView extends StatelessWidget {
                     "assets/images/droppp.jpg",
                     fit: BoxFit.cover,
                   ),
-                  // child: Image.asset(
-                  //   imageUrl,
-                  //   fit: BoxFit.cover,
-                  // ),
                 ),
-                Positioned(
-                  top: 10,
-                  left: 10,
-                  child: IconButton(
-                    icon: Icon(Icons.arrow_back),
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                ),
-                Positioned(
-                  top: 10,
-                  right: 10,
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.share,
-                      color: Colors.grey,
-                    ),
-                    onPressed: () {},
-                  ),
-                ),
+                // Positioned(
+                //   top: 10,
+                //   left: 10,
+                //   child: IconButton(
+                //     icon: Icon(Icons.arrow_back),
+                //     onPressed: () {
+                //       Navigator.pop(context);
+                //     },
+                //   ),
+                // ),
+                // Positioned(
+                //   top: 10,
+                //   right: 10,
+                //   child: IconButton(
+                //     icon: Icon(
+                //       Icons.share,
+                //       color: Colors.grey,
+                //     ),
+                //     onPressed: () {},
+                //   ),
+                // ),
               ]),
               SizedBox(height: 10),
               Padding(
@@ -137,7 +144,7 @@ class ProductView extends StatelessWidget {
                               "1 day ago | Trends",
                               style: TextStyle(
                                 color: Colors.grey,
-                                fontSize: 15,
+                                fontSize: 12,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -155,7 +162,7 @@ class ProductView extends StatelessWidget {
                           " 680  ",
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: 15,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -167,7 +174,7 @@ class ProductView extends StatelessWidget {
                           " 984",
                           style: TextStyle(
                             color: Colors.grey,
-                            fontSize: 15,
+                            fontSize: 12,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

@@ -12,27 +12,18 @@ class SecondSearch extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // titleSpacing: 20,
-        title: Padding(
-          padding: const EdgeInsets.only(top: 30),
-          child: Text("Search", style: TextStyle(fontWeight: FontWeight.bold)),
-        ),
+        title: Text("Search", style: TextStyle(fontWeight: FontWeight.bold)),
         centerTitle: true,
-        leading: Padding(
-          padding: const EdgeInsets.only(top: 30),
-          child: IconButton(
-            icon: Icon(Icons.close_outlined),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+        leading: IconButton(
+          icon: Icon(Icons.close_outlined),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 20,
-            ),
             Container(
               padding: EdgeInsets.only(left: 10, right: 30),
               child: TextField(
@@ -40,11 +31,11 @@ class SecondSearch extends StatelessWidget {
                   suffixIcon: Icon(
                     Icons.search,
                     color: Colors.black,
-                    size: 30,
+                    size: 25,
                   ),
                   hintText: 'Try  Jacket',
                   hintStyle: TextStyle(
-                      fontSize: 30,
+                      fontSize: 25,
                       fontWeight: FontWeight.w600,
                       color: Colors.grey),
                   filled: false,

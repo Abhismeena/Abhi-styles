@@ -13,24 +13,27 @@ class Charged extends StatelessWidget {
           alignment: Alignment.center,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 100,
+                height: 10,
               ),
-              Container(
-                alignment: Alignment.center,
-                child: Text(
-                  " Searching  similar results.....",
-                  style: TextStyle(
-                      fontSize: 25,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
+              Center(
+                child: Container(
+                  padding: EdgeInsets.only(left: 50, right: 20),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Searching  similar results.....",
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
               Container(
-                height: 500,
-                width: 500,
+                height: 400,
+                width: 400,
                 // color: Colors.amber,
                 child: Image.asset(
                   "assets/images/chargg.gif",

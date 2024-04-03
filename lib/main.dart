@@ -1,3 +1,7 @@
+import 'package:fashion/views/screens/SelectedItemScreen.dart';
+import 'package:fashion/views/screens/Trends.dart';
+import 'package:fashion/views/screens/shopThelook.dart';
+import 'package:fashion/views/screens/showproduct.dart';
 import 'package:fashion/views/splashScreen/splashScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: SplashScreen(),
+      body: Trends(),
       // Payment()
       // DashbordScreen(),
       // SelectedItemScreen(),

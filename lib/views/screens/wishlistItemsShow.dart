@@ -22,10 +22,11 @@ class WishlistItemsShow extends StatelessWidget {
         ),
         body: Center(
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 150,
+                height: 15,
               ),
               Container(
                 height: 150,
@@ -57,17 +58,10 @@ class WishlistItemsShow extends StatelessWidget {
                 height: 20,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 50, right: 50),
+                padding: const EdgeInsets.all(15),
                 child: Text(
-                  "Add your favouritr products and easly ",
-                  style: TextStyle(fontSize: 15, color: Colors.grey),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 50, right: 50),
-                child: Text(
-                  "browser them here",
-                  style: TextStyle(fontSize: 15, color: Colors.grey),
+                  "Add your favouritr products and easly browser them here ",
+                  style: TextStyle(fontSize: 13, color: Colors.grey),
                 ),
               ),
             ],

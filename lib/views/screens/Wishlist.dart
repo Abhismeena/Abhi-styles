@@ -1,5 +1,6 @@
 import 'package:fashion/modal/colCarts/colCarts.dart';
 import 'package:fashion/views/screens/SelectedItemScreen.dart';
+import 'package:fashion/views/screens/itemsFound.dart';
 // import 'package:fashion/views/screens/itemsFound.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -102,9 +103,18 @@ class Wishlist extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
-            child: Text(
-              "Edit",
-              style: TextStyle(fontSize: 18, color: Colors.grey),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ItemsFound(),
+                    ));
+              },
+              child: Text(
+                "Edit",
+                style: TextStyle(fontSize: 18, color: Colors.grey),
+              ),
             ),
           )
         ],

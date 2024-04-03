@@ -22,14 +22,14 @@ class PopUpScreen extends StatelessWidget {
           Image.asset(
             'assets/images/popup_image.jpeg',
             width: 300,
-            height: 400,
+            height: 300,
             fit: BoxFit.cover,
           ),
           SizedBox(
             height: 10,
           ),
           Text(
-            "Get the latest trends \n      for your style",
+            "Get the latest trends for your style",
             style: TextStyle(
                 fontSize: 21, fontWeight: FontWeight.bold, color: Colors.white),
           ),
@@ -37,7 +37,7 @@ class PopUpScreen extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "We'll send you the latest fashion trends \n          every week to your inbox!",
+            "We'll send you the latest fashion trends  every week to your inbox!",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,

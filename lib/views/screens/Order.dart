@@ -26,7 +26,8 @@ class Order extends StatelessWidget {
           height: double.maxFinite,
           width: double.maxFinite,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
                 'assets/images/arrowimages.jpg',
@@ -48,22 +49,19 @@ class Order extends StatelessWidget {
                 margin: EdgeInsets.only(left: 50),
                 width: double.infinity,
                 child: Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 40, right: 40),
-                    child: Text(
-                      "your order has been placed succesfully more details check your account ",
-                      style: TextStyle(fontSize: 20, color: Colors.grey),
-                    ),
+                  child: Text(
+                    "your order has been placed succesfully more details check your account ",
+                    style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
                 ),
               ),
               SizedBox(
-                height: 150,
+                height: 180,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
                 child: Container(
-                  height: 50,
+                  height: 40,
                   width: double.infinity,
                   child: RoundedButton(
                     btnName: 'Continue shopping',
